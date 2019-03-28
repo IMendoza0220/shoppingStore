@@ -1,15 +1,10 @@
 $(function () {
-    let productName = $('#productName')
-    let productManufacturer = $('#productManufacturer')
-    let productPrice = $('#productPrice')
-    $('#btnProductAdd').click(function () {
-        addProduct(
-            productName.val(),
-            productManufacturer.val(),
-            productPrice.val(),
-            function (addedProduct) {
-                window.alert("Added " + addedProduct.name + "to Database")
-            }
-        )
+    let productList = $('#product-list')
+    fetchProducts(function (products) {
+        productList.empty()
+        for (product of products) {
+            productList.append(createProductCard(product))
+        }
     })
+
 })
