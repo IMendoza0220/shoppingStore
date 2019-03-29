@@ -26,7 +26,7 @@ route.post('/', function(req, res) {
     //Add a new Product
     Product.create({
         name: req.body.name,
-        manufacturer: req.body.manufacturer,
+        department: req.body.department,
         price: parseFloat(req.body.price)
     }).then(function(product){
         res.status(201).send(product)
