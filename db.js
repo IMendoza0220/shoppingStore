@@ -30,7 +30,7 @@ const Product = db.define('products', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    manufacturer: Sequelize.STRING,
+    department: Sequelize.STRING,
     price: {
         type: Sequelize.FLOAT,
         allowNull: false,
