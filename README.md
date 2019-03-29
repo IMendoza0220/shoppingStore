@@ -16,5 +16,5 @@ Online store with hookah and shisha products. Users can add products to their ca
 * Sally Alwari
 * Adrian Morales
 
-# Future Improvement
+## Future Improvement
 - [ ] Payment processing functionality using Stripe.js
