@@ -1,21 +1,22 @@
-const Product = require('../../db').Product
+var Product = require('../../db').Product
 
-const route = require('express').Router()
+var route = require('express').Router()
 
-route.get('/', (req, res) => {
+
+route.get('/', function(req, res) {
     //Get all Products
     Product.findAll()
-        .then((products) => {
+        .then(function(products) {
             res.status(200).send(products)
         })
-        .catch((err) => {
+        .catch(function(err) {
             res.status(500).send({
                 error: "Could not  retrieve products"
             })
         })
 
 })
-route.post('/', (req, res) => {
+route.post('/', function(req, res) {
     //Validate the values
     if (isNaN(req.body.price)) {
         return res.status(403).send({
