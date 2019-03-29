@@ -28,9 +28,9 @@ route.post('/', function(req, res) {
         name: req.body.name,
         manufacturer: req.body.manufacturer,
         price: parseFloat(req.body.price)
-    }).then((product) => {
+    }).then(function(product){
         res.status(201).send(product)
-    }).catch((error) => {
+    }).catch(function(error) {
         res.status(501).send({
             error: "Error adding product"
         })
