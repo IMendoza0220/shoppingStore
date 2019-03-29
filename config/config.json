@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "tilapia123",
+    "password": "nenafofo83",
     "database": "shoppingdb",
     "host": "localhost",
     "port": 3306,
@@ -9,11 +9,11 @@
   },
   "test": {
     "username": "root",
-    "password": "tilapia123",
+    "password": "nenafofo83",
     "database": "shoppingdb",
     "host": "localhost",
     "dialect": "mysql",
-    "logging": true
+    "logging": false
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
