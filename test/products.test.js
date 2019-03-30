@@ -14,7 +14,7 @@ describe("GET /api/products", function() {
   // & delete all examples from the db
   beforeEach(function() {
     request = chai.request(server);
-    return db.sequelize.sync({ force: true });
+    return db.sequelizeConnection.sync({ force: true });
   });
 
   it("should find all products", function(done) {

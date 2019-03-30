@@ -1,5 +1,5 @@
 var Sequelize = require("sequelize");
-var db = new Sequelize("shoppingdb", "root", "amorales80", {
+var sequelizeConnection = new Sequelize("shoppingdb", "root", "amorales80", {
     host: "localhost",
     dialect: "mysql",
     //pool is the amount of connections sequelize can keep open
@@ -10,7 +10,7 @@ var db = new Sequelize("shoppingdb", "root", "amorales80", {
 });
 
 //objects defining each table
-var User = db.define("users", {
+var User = sequelizeConnection.define("users", {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -22,7 +22,7 @@ var User = db.define("users", {
     }
 });
 
-var Product = db.define("products", {
+var Product = sequelizeConnection.define("products", {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -41,7 +41,7 @@ var Product = db.define("products", {
 });
 
 //method that creates database using object definitions
-db.sync()
+sequelizeConnection.sync()
     .then(function() {
         console.log("Database has been synced")
     })
@@ -51,5 +51,7 @@ db.sync()
 
 exports = module.exports = {
     User,
-    Product
+    Product,
+    Sequelize,
+    sequelizeConnection
 };
