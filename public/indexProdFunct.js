@@ -22,7 +22,7 @@ function createProductCard(product) {
         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="${product.name}"></a>
         <div class="card-body">
             <h4 class="card-title product-name">${product.name}</h4>
-            <h5 class="card-title product-price">${product.price}</h5>
+            <h5 class="card-title product-price"><span>$</span>${product.price}</h5>
             <p class="card-text product-department">${product.department}</p>
         </div>
         <div class="card-footer">
