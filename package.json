@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce",
+  "name": "hookazon",
   "version": "1.0.0",
   "description": "Web store Using Express,SQL(sequelize)",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Sally Alwari, Taylor Gomez, Ivan Mendoza, Adrian Morales",
   "license": "ISC",
   "dependencies": {
     "config.json": "0.0.4",
