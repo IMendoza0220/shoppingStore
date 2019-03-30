@@ -8,7 +8,7 @@ $(function () {
             productDepartment.val(),
             productPrice.val(),
             function (addedProduct) {
-                alert("Added " + addedProduct.name + "to the database");
+                alert("Added " + addedProduct.name + " to the database");
             }
         );
     });
