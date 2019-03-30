@@ -1,7 +1,7 @@
 $(function () {
-    let productName = $('#productName');
-    let productDepartment = $('#productDepartment');
-    let productPrice = $('#productPrice');
+    var productName = $('#productName');
+    var productDepartment = $('#productDepartment');
+    var productPrice = $('#productPrice');
     $('#btnProductAdd').click(function () {
         addProduct(
             productName.val(),

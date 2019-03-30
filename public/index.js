@@ -1,10 +1,10 @@
 
-$(function(){
-    let productList = $('#product-list');
-    fetchProductsCard(function(products){
+$(document).ready(function() {
+    var productList = $("#product-list");
+    fetchProducts(function (products) {
         productList.empty();
-        for (product of products){
+        products.forEach(function(product) {
             productList.append(createProductCard(product));
-        }
-    })
-})
+        });
+    });
+});
