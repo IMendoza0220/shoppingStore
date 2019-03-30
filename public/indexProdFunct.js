@@ -4,10 +4,10 @@ function fetchProducts(done) {
     });
 }
 
-function addProduct(name, depart, price, done) {
+function addProduct(name, department, price, done) {
     $.post('/api/products', {
             name: name,
-            department: depart,
+            department: department,
             price: price
         }, function (data) {
             done(data);
