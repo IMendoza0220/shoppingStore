@@ -1,5 +1,5 @@
 var Sequelize = require("sequelize");
-var sequelizeConnection = new Sequelize("shoppingdb", "root", "amorales80", {
+var sequelizeConnection = new Sequelize("shoppingdb", "root", "Tinker1224", {
     host: "localhost",
     dialect: "mysql",
     //pool is the amount of connections sequelize can keep open
