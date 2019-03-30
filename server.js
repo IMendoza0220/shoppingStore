@@ -1,7 +1,7 @@
 var express = require("express");
 var path = require("path");
 var app = express();
-
+require('dotenv').config()
 //setup express app to handle data parsing from post requests in db.js
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
