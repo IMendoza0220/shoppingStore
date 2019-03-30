@@ -17,19 +17,18 @@ function addProduct(name, department, price, done) {
 
 function createProductCard(product) {
     return $(`
-    <div class="col-4 card mx-2 mb-2 p-1">
-         <h4 class="product-name">${product.name}</h4>
-        <div><b class="product-department">${product.department}</b></div>
-        <div class="row">
-        <br>
-        <div class="row">
-            <div class="col m-3 p-3">
-                <b class="product-price">$ ${product.price}</b>
-            </div>
+    <div class="col-lg-3 col-md-3 m-2">
+    <div class="card h-100 mt-3">
+        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="${product.name}"></a>
+        <div class="card-body">
+            <h4 class="card-title product-name">${product.name}</h4>
+            <h5 class="card-title product-price">${product.price}</h5>
+            <p class="card-text product-department">${product.department}</p>
         </div>
-        <div class="col-6">
-            <button class="btn btn-primary">Buy</button>
+        <div class="card-footer">
+            <small class="text-muted"><button class="btn btn-primary">Buy</button></small>
         </div>
+    </div>
     </div>
     `);
 }
