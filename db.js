@@ -79,10 +79,10 @@ var Customer = sequelizeConnection.define("customers", {
 //method that creates database using object definitions
 sequelizeConnection.sync()
     .then(function() {
-        console.log("Database has been synced")
+        console.log("Database has been synced");
     })
     .catch(function(err){
-        console.error("Error creating database")
+        console.error("Error creating database");
     });
 
 exports = module.exports = {
