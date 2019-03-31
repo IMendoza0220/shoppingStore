@@ -5,14 +5,14 @@ var route = require("express").Router();
 route.get("/", function(req, res) {
     //Get all Products; sequelize will fetch all products following a get request
     Product.findAll()
-        .then(function(products) {
-            res.status(200).send(products);
-        })
-        .catch(function(err) {
-            res.status(500).send({
-                error: "Could not  retrieve products"
-            });
+    .then(function(products) {
+        res.status(200).send(products);
+    })
+    .catch(function(err) {
+        res.status(500).send({
+            error: "Could not  retrieve products"
         });
+    });
 
 });
 
