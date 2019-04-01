@@ -27,7 +27,8 @@ route.post("/", function(req, res) {
     Product.create({
         name: req.body.name,
         department: req.body.department,
-        price: parseFloat(req.body.price)
+        price: parseFloat(req.body.price),
+        picture: req.body.picture  
     }).then(function(product){
         res.status(201).send(product);
     }).catch(function(err) {
