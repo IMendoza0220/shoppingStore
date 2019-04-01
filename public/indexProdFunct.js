@@ -53,3 +53,14 @@ function addCustomer(firstName, lastName, address1, address2, city, state, zip, 
         }
     );
 }
+
+function addToCart(name, department, price, done) {
+    $.post("/api/products", {
+            name: name,
+            department: department,
+            price: price
+        }, function (data) {
+            done(data);
+        }
+    );
+}
