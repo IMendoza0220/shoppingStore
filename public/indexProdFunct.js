@@ -26,7 +26,9 @@ function createProductCard(product) {
             <p class="card-text product-department">${product.department}</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted"><button class="btn btn-primary">Buy</button></small>
+        <span class="store-item-icon">
+            <small class="text-muted"><button class="btn btn-primary" type="button" id="buyButton">Buy</button></small>
+        </span>    
         </div>
     </div>
     </div>
