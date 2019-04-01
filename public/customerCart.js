@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 (function () {
 
-    const cartBtn = document.querySelectorAll('.store-item-icon');
+    const cartBtn = document.querySelectorAll('#product-list');
 
     cartBtn.forEach(function (btn) {
         btn.addEventListener("click", function(event) {
