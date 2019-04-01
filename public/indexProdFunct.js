@@ -5,7 +5,7 @@ function fetchProducts(done) {
 }
 
 function addProduct(name, department, price, done) {
-    $.post('/api/products', {
+    $.post("/api/products", {
             name: name,
             department: department,
             price: price
@@ -31,4 +31,25 @@ function createProductCard(product) {
     </div>
     </div>
     `);
+}
+
+function fetchCustomers(done) {
+    $.get("/api/customers", function (data) {
+        done(data);
+    });
+}
+
+function addCustomer(firstName, lastName, address1, address2, city, state, zip, done) {
+    $.post("api/customers", {
+        firstName: firstName,
+        lastName: lastName,
+        address1: address1,
+        address2: address2,
+        city: city,
+        state: state,
+        zip: zip
+    }, function (data) {
+            done(data);
+        }
+    );
 }
