@@ -37,6 +37,10 @@ var Product = sequelizeConnection.define("products", {
         type: Sequelize.FLOAT,
         allowNull: false,
         defaultValue: 0.0
+    },
+    picture: {
+        type: Sequelize.BLOB,
+        allowNull: false,
     }
 });
 

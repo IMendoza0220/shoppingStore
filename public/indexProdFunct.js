@@ -4,11 +4,12 @@ function fetchProducts(done) {
     });
 }
 
-function addProduct(name, department, price, done) {
-    $.post("/api/products", {
+function addProduct(name, department, price, picture, done) {
+    $.post('/api/products', {
             name: name,
             department: department,
-            price: price
+            price: price,
+            picture:picture
         }, function (data) {
             done(data);
         }
@@ -19,7 +20,7 @@ function createProductCard(product) {
     return $(`
     <div class="col-lg-3 col-md-3 m-2">
     <div class="card h-100 mt-3">
-        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="${product.name}"></a>
+        <a href="#"><img class="card-img-top" src="${product.picture}" alt="${product.name}"></a>
         <div class="card-body">
             <h4 class="card-title product-name">${product.name}</h4>
             <h5 class="card-title product-price"><span>$</span>${product.price}</h5>
