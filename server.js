@@ -13,4 +13,4 @@ app.use("/", express.static(path.join(__dirname,"public")));
 //to create users, use postman to make a post request at /api/users
 app.use("/api", require("./routes/api").route);
 
-module.exports = app.listen(2678, function(){console.log("Server started at http://localhost:2678")});
+module.exports = app.listen(2677, function(){console.log("Server started at http://localhost:2678")});
