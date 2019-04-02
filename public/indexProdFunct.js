@@ -1,30 +1,31 @@
-function fetchProducts(done) {
+//global variable used with addToCart method
+var cartItems = [];
+
+function fetchProducts(callback) {
     $.get("/api/products", function (data) {
-        done(data);
+        callback(data);
     });
 }
 
-function addProduct(name, department, price, picture, done) {
+function addProduct(name, department, price, picture, callback) {
     $.post('/api/products', {
         name: name,
         department: department,
         price: price,
         picture: picture
     }, function (data) {
-        done(data);
+        callback(data);
     }
     );
 }
 
-function fetchProduct(product) {
-    //store this somewhere 
-    console.log(product);
-    $.get(`/api/products/${product.id}`, function(data) {
-        console.log(data);
-        var ids = [];
-        localStorage.setItem("ids", [...ids, ...product.id])
-    })
+function addToCart(product) {
     
+    $.get(`/api/products/${product.id}`, function(data) {
+        var receiveddata = JSON.stringify(data);
+        cartItems.push(receiveddata);
+        localStorage.setItem('cartItems', cartItems.join(', '));
+    });
 }
 
 function createProductCard(product) {
@@ -38,7 +39,7 @@ function createProductCard(product) {
             <p class="card-text product-department">${product.department}</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted" id="${product.id}" onclick="fetchProduct(this)"><button class="btn btn-primary">Add to Cart</button></small>
+            <small class="text-muted" id="${product.id}" onclick="addToCart(this)"><button class="btn btn-primary">Add to Cart</button></small>
         </div>
     </div>
     </div>
