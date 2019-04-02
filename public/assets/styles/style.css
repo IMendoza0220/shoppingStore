@@ -32,3 +32,8 @@
   #cart-item-price {
     font-size: 0.8rem;
   }
+
+  body {
+    background-image: url(../Images/arabesque.png);
+    background-color: #704b00;
+  }
