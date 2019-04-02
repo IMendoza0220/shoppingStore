@@ -39,7 +39,7 @@ var Product = sequelizeConnection.define("products", {
         defaultValue: 0.0
     },
     picture: {
-        type: Sequelize.BLOB,
+        type: Sequelize.TEXT,
         allowNull: false,
     }
 });
