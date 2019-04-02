@@ -21,6 +21,8 @@ function fetchProduct(product) {
     console.log(product);
     $.get(`/api/products/${product.id}`, function(data) {
         console.log(data);
+        var ids = [];
+        localStorage.setItem("ids", [...ids, ...product.id])
     })
     
 }

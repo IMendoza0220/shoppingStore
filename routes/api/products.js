@@ -38,11 +38,14 @@ route.post("/", function(req, res) {
     });
 });
 
-route.get("/api/products/:id", function(req, res) {
+route.get("/:id", function(req, res) {
+    var numberId = parseInt(req.params.id);
+
+    console.log(typeof numberId);
     //Get all Products; sequelize will fetch all products following a get request
-    Product.find({
+    Product.findOne({
         where: {
-            id: req.params.id
+            id: numberId
         }
     })
     .then(function(products) {
