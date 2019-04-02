@@ -6,14 +6,23 @@ function fetchProducts(done) {
 
 function addProduct(name, department, price, picture, done) {
     $.post('/api/products', {
-            name: name,
-            department: department,
-            price: price,
-            picture:picture
-        }, function (data) {
-            done(data);
-        }
+        name: name,
+        department: department,
+        price: price,
+        picture: picture
+    }, function (data) {
+        done(data);
+    }
     );
+}
+
+function fetchProduct(product) {
+    //store this somewhere 
+    console.log(product);
+    $.get(`/api/products/${product.id}`, function(data) {
+        console.log(data);
+    })
+    
 }
 
 function createProductCard(product) {
@@ -27,7 +36,7 @@ function createProductCard(product) {
             <p class="card-text product-department">${product.department}</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted"><button class="btn btn-primary">Buy</button></small>
+            <small class="text-muted" id="${product.id}" onclick="fetchProduct(this)"><button class="btn btn-primary">Add to Cart</button></small>
         </div>
     </div>
     </div>
@@ -50,18 +59,8 @@ function addCustomer(firstName, lastName, address1, address2, city, state, zip, 
         state: state,
         zip: zip
     }, function (data) {
-            done(data);
-        }
+        done(data);
+    }
     );
 }
 
-function addToCart(name, department, price, done) {
-    $.post("/api/products", {
-            name: name,
-            department: department,
-            price: price
-        }, function (data) {
-            done(data);
-        }
-    );
-}

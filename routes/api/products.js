@@ -38,4 +38,24 @@ route.post("/", function(req, res) {
     });
 });
 
+route.get("/api/products/:id", function(req, res) {
+    //Get all Products; sequelize will fetch all products following a get request
+    Product.find({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(function(products) {
+        res.status(200).send(products);
+    })
+    .catch(function(err) {
+        res.status(500).send({
+            error: "Could not  retrieve products"
+        });
+    });
+
+});
+
 exports = module.exports = route;
+
+
