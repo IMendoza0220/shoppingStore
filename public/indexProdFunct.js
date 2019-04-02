@@ -15,9 +15,13 @@ function addProduct(name, department, price, picture, done) {
         }
     );
 }
+function btnclick (product){
+    console.log(product);
+}
 
 function createProductCard(product) {
-    return $(`
+    // console.log(product);
+    return `
     <div class="col-lg-3 col-md-3 m-2">
     <div class="card h-100 mt-3">
         <a href="#"><img class="card-img-top" src="${product.picture}" alt="${product.name}"></a>
@@ -28,12 +32,13 @@ function createProductCard(product) {
         </div>
         <div class="card-footer">
         <span class="store-item-icon">
-            <small class="text-muted"><button class="btn btn-primary" type="button" id="buyButton">Buy</button></small>
+            <small class="text-muted" onclick="btnclick(${product.price})>
+            <button class="btn btn-primary mybtn" type="button" id="buyButton">Buy</button ></small>
         </span>    
         </div>
     </div>
     </div>
-    `);
+    `
 }
 
 function fetchCustomers(done) {
