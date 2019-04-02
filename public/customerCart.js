@@ -15,14 +15,14 @@ $(document).ready(function () {
 
 (function () {
 
-    // const cartBtn = document.querySelectorAll('#product-list');
+    const cartBtn = document.querySelectorAll('#product-list');
 
-    // cartBtn.forEach(function (btn) {
-    //     btn.addEventListener("click", function(event) {
+    cartBtn.forEach(function (btn) {
+        btn.addEventListener("click", function(event) {
 
-    //         console.log(event.target);
-    //     });
-    // });
+            console.log(event.target);
+        });
+    });
 
 
 })();
