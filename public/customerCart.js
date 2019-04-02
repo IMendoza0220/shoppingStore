@@ -21,6 +21,6 @@ $(document).ready(function () {
     }
     //use reduce method to calculate sum of the items stored in local storage
     var totalPrice = pricesArray.reduce((partial_sum, a) => partial_sum + a); 
-    console.log(totalCartItems, totalPrice);  
+    console.log(totalCartItems, totalPrice);
 
 });
