@@ -68,12 +68,12 @@ body {
   bottom: 45px;
 }
 
-#continue {
+#continue, #returnToCart {
   color: darkgoldenrod;
   border-color: darkgoldenrod;
 }
 
-#continue:hover {
+#continue:hover, #returnToCart:hover {
   background-color: darkgoldenrod;
   color: white;
 }
