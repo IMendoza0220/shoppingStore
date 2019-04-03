@@ -38,7 +38,7 @@ function createProductCard(product) {
             <p class="card-text product-department">${product.department}</p>
         </div>
         <div class="card-footer">
-            <small class="text-muted add-to-cart" id="${product.id}" onclick="addToCart(this)"><button class="btn btn-primary">Add to Cart</button></small>
+            <small class="text-muted add-to-cart" id="${product.id}" onclick="addToCart(this); location.reload();"><button class="btn btn-primary">Add to Cart</button></small>
         </div>
     </div>
     </div>

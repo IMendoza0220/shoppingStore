@@ -43,13 +43,21 @@ $(document).ready(function () {
                         <td><span class="currency"><span class="amount">${Dinero({ amount:cartItems[i].price, currency: 'USD' }).toFormat('$0.00')}</span></span></td>
                       </tr>
         `)
-        $("#cart-info").html(`
-        <span class="cart-info__icon mr-lg-3"><i class="fa fa-shopping-cart"></i></span>
-                    <p class="mb-0 text-capitalize"><span id="item-count">${cartItems.length}</span> items - <span
-                            id="item-total">${Dinero({ amount:cartItems[i].price, currency: 'USD' }).toFormat('$0.00')}</span></p>
-        `)
-    }
 
+    }
+    if (cartItems.length === 0) {
+        $("#cart-info").html(`
+    <span class="cart-info__icon mr-lg-3"><i class="fa fa-shopping-cart"></i></span>
+                <p class="mb-0 text-capitalize"><span id="item-count">0</span> items - <span
+                        id="item-total">$0</span></p>
+    `);
+    } else {
+        $("#cart-info").html(`
+    <span class="cart-info__icon mr-lg-3"><i class="fa fa-shopping-cart"></i></span>
+                <p class="mb-0 text-capitalize"><span id="item-count">${cartItems.length}</span> items - <span
+                        id="item-total">${Dinero({ amount: price, currency: 'USD' }).toFormat('$0.00')}</span></p>
+    `);
+    }
 
 
 });
