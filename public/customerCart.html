@@ -16,6 +16,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets/styles/style.css">
   <script src="indexProdFunct.js"></script>
   <script src="index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dinero.js@0.3.0/build/umd/dinero.min.js"></script>
@@ -41,7 +42,7 @@
 
   <div class="container mt-4">
     <div class="row mt-5">
-      <h1 class="mt-5">Shopping Cart</h1>
+      <h1 class="mt-5" id="shoppingCartTitle">Shopping Cart</h1>
       <table class="table">
         <thead>
           <tr>
@@ -60,18 +61,18 @@
   <div class="container mb-5 mt-3">
     <div class="row justify-content-between">
       <div class="col-4">
-        <h3>Free 2-Day Shipping!</h3>
+        <h3 id="freeShipping">Free 2-Day Shipping!</h3>
       </div>
       <div class="col-4 mb-4">
           <button type="button" class="btn btn-light btn-lg" id="total-price" style="display: block; width: 142.617px; height: 37px;"></button>
       </div>
     </div>
     <div class="row justify-content-end">
-      <div class="col-3">
-        <a href="index.html"> <button class="btn btn-outline-success btn-lg">Continue Shopping</button></a>
+      <div class="col-3 mt-5">
+        <a href="index.html"> <button id="continue" class="btn btn-outline-success btn-lg" style="border-color:darkgoldenrod";>Continue Shopping</button></a>
       </div>
-      <div class="col-2">
-        <a href="customerInfo.html"><button class="btn btn-success btn-lg">Checkout</button></a>
+      <div class="col-2 mt-5">
+        <a href="customerInfo.html"><button class="btn btn-success btn-lg" style="background-color:darkgoldenrod; border: none">Checkout</button></a>
       </div>
     </div>
   </div>
