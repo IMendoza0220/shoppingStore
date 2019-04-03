@@ -8,9 +8,9 @@ $(document).ready(function () {
     for (var i = 0; i < cartItems.length; i++) {
         $("#cartBody").append(`
         <tr>
-            <td><img src=${cartItems[i].picture}></td>
+            <td><img id ="picInCart" src=${cartItems[i].picture}></td>
             <td>
-                <a href="#">${cartItems[i].name}</a>
+                <a href="#" id="cartItemName">${cartItems[i].name}</a>
                 <p>${cartItems[i].department}</p>
                 <button class="btn btn-danger btn-sm">Remove</button>
             </td>
@@ -19,7 +19,7 @@ $(document).ready(function () {
                     <div class="input-group-prepend">
                         <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">-</button>
                     </div>
-                        <input class="text-center" type="text" maxlength="3" size="1">
+                        <input class="text-center" type="text" maxlength="3" size="1" placeholder="1">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="button">+</button>
                     </div>
@@ -51,7 +51,7 @@ $(document).ready(function () {
         `);
     } else {
         $("#total-price").html(`
-        <h3> Total: ${Dinero({ amount: price, currency: 'USD' }).toFormat('$0.00')}</h3>
+        <h3 id="totalPriceInCart"> <b style="color:darkgoldenrod">Total:</b> ${Dinero({ amount: price, currency: 'USD' }).toFormat('$0.00')}</h3>
       `);
     }
 
