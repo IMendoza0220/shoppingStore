@@ -23,10 +23,10 @@ $(document).ready(function () {
     for (var i = 0; i < cartItems.length; i++) {
         $("#cartBody").append(`
         <tr>
-                        <td>Item 1 Image</td>
+                        <td><img src=${cartItems[i].picture}></td>
                         <td>
                             <a href="#">${cartItems[i].name}</a>
-                            <p>Product Department</p>
+                            <p>${cartItems[i].department}</p>
                             <button class="btn btn-danger btn-sm">Remove</button>
                         </td>
                         <td>
@@ -40,21 +40,16 @@ $(document).ready(function () {
                                 </div>
                             </div>
                         </td>
-                        <td><span class="currency">$<span class="amount">100</span></span></td>
+                        <td><span class="currency"><span class="amount">${Dinero({ amount:cartItems[i].price, currency: 'USD' }).toFormat('$0.00')}</span></span></td>
                       </tr>
+        `)
+        $("#cart-info").html(`
+        <span class="cart-info__icon mr-lg-3"><i class="fa fa-shopping-cart"></i></span>
+                    <p class="mb-0 text-capitalize"><span id="item-count">${cartItems.length}</span> items - <span
+                            id="item-total">${Dinero({ amount:cartItems[i].price, currency: 'USD' }).toFormat('$0.00')}</span></p>
         `)
     }
 
-// returns a Dinero object with amount 600
-const rates = {
-    rates: {
-      EUR: 0.81162
-    }
-  }
-  
-  const money= Dinero({ amount: 500 })
-    .convert('EUR', {
-      endpoint: new Promise(resolve => resolve(rates))
-    })
-    console.log(money);
+
+
 });

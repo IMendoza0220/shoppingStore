@@ -34,7 +34,7 @@ function createProductCard(product) {
         <a href="#"><img class="card-img-top" src="${product.picture}" alt="${product.name}"></a>
         <div class="card-body">
             <h4 class="card-title product-name">${product.name}</h4>
-            <h5 class="card-title product-price"><span>$</span>${product.price}</h5>
+            <h5 class="card-title product-price">${Dinero({ amount:product.price, currency: 'USD' }).toFormat('$0.00')}</h5>
             <p class="card-text product-department">${product.department}</p>
         </div>
         <div class="card-footer">
