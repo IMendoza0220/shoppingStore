@@ -1,5 +1,9 @@
 var Sequelize = require("sequelize");
-var sequelizeConnection = new Sequelize("shoppingdb", "root", process.env.password, {
+var sequelizeConnection;
+
+if (process.env.JAWSDB_URL) {
+sequelizeConnection = new Sequelize(process.env.JAWSDB_URL); } else {
+    sequelizeConnection = new Sequelize("shoppingdb", "root", process.env.password, {
     host: "localhost",
     dialect: "mysql",
     //pool is the amount of connections sequelize can keep open
