@@ -66,3 +66,10 @@ function addCustomer(firstName, lastName, address1, address2, city, state, zip, 
     );
 }
 
+function calculatePrice(cart) {
+    //use reduce method to calculate sum of the items stored in local storage
+    var totalPrice = !cart.length ? 0 : cart.reduce((partial_sum, item) => partial_sum + item.price, 0); 
+    // console.log(totalCartItems, totalPrice);
+    return totalPrice;
+}
+
