@@ -31,17 +31,17 @@ if (process.env[dbEnv.use_env_variable]) {
 
 
 //objects defining each table
-var User = sequelizeConnection.define("users", {
-    id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-    },
-    name: {
-        type: Sequelize.STRING,
-        allowNull: false
-    }
-});
+// var User = sequelizeConnection.define("users", {
+//     id: {
+//         type: Sequelize.INTEGER,
+//         autoIncrement: true,
+//         primaryKey: true,
+//     },
+//     name: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     }
+// });
 
 var Product = sequelizeConnection.define("products", {
     id: {
@@ -65,41 +65,41 @@ var Product = sequelizeConnection.define("products", {
     }
 });
 
-var Customer = sequelizeConnection.define("customers", {
-    id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-    },
-    firstName: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    lastName: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    address1: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    address2: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    city: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    state: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    zip: {
-        type: Sequelize.STRING,
-        allowNull: false
-    }
-});
+// var Customer = sequelizeConnection.define("customers", {
+//     id: {
+//         type: Sequelize.INTEGER,
+//         autoIncrement: true,
+//         primaryKey: true,
+//     },
+//     firstName: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     },
+//     lastName: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     },
+//     address1: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     },
+//     address2: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     },
+//     city: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     },
+//     state: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     },
+//     zip: {
+//         type: Sequelize.STRING,
+//         allowNull: false
+//     }
+// });
 
 //method that creates database using object definitions
 sequelizeConnection.sync()
@@ -111,9 +111,9 @@ sequelizeConnection.sync()
     });
 
 exports = module.exports = {
-    User,
+    // User,
     Product,
-    Customer,
+    // Customer,
     Sequelize,
     sequelizeConnection
 };
