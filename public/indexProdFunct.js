@@ -45,26 +45,26 @@ function createProductCard(product) {
     `);
 }
 
-function fetchCustomers(done) {
-    $.get("/api/customers", function (data) {
-        done(data);
-    });
-}
+// function fetchCustomers(done) {
+//     $.get("/api/customers", function (data) {
+//         done(data);
+//     });
+// }
 
-function addCustomer(firstName, lastName, address1, address2, city, state, zip, done) {
-    $.post("api/customers", {
-        firstName: firstName,
-        lastName: lastName,
-        address1: address1,
-        address2: address2,
-        city: city,
-        state: state,
-        zip: zip
-    }, function (data) {
-        done(data);
-    }
-    );
-}
+// function addCustomer(firstName, lastName, address1, address2, city, state, zip, done) {
+//     $.post("api/customers", {
+//         firstName: firstName,
+//         lastName: lastName,
+//         address1: address1,
+//         address2: address2,
+//         city: city,
+//         state: state,
+//         zip: zip
+//     }, function (data) {
+//         done(data);
+//     }
+//     );
+// }
 
 function calculatePrice(cart) {
     //use reduce method to calculate sum of the items stored in local storage
