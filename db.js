@@ -5,15 +5,15 @@ var dbEnv = config[env];
 
 console.log(dbEnv);
 
-// var sequelizeConnection = new Sequelize("shoppingdb", "root", process.env.password, {
-//     host: "localhost",
-//     dialect: "mysql",
-//     //pool is the amount of connections sequelize can keep open
-//     pool: {
-//         min: 0,
-//         max: 5
-//     }
-// });
+var sequelizeConnection = new Sequelize("shoppingdb", "root", process.env.password, {
+    host: "localhost",
+    dialect: "mysql",
+    //pool is the amount of connections sequelize can keep open
+    pool: {
+        min: 0,
+        max: 5
+    }
+});
 
 if (process.env[dbEnv.use_env_variable]) {
     sequelizeConnection = new Sequelize(process.env[dbEnv.use_env_variable]);
@@ -30,18 +30,18 @@ if (process.env[dbEnv.use_env_variable]) {
 
 
 
-//objects defining each table
-// var User = sequelizeConnection.define("users", {
-//     id: {
-//         type: Sequelize.INTEGER,
-//         autoIncrement: true,
-//         primaryKey: true,
-//     },
-//     name: {
-//         type: Sequelize.STRING,
-//         allowNull: false
-//     }
-// });
+objects defining each table
+var User = sequelizeConnection.define("users", {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+    },
+    name: {
+        type: Sequelize.STRING,
+        allowNull: false
+    }
+});
 
 var Product = sequelizeConnection.define("products", {
     id: {
