@@ -1,5 +1,5 @@
-var User = require("../../db").User;
-var route = require("express").Router();
+// var User = require("../../db").User;
+// var route = require("express").Router();
 
 // route.get("/", function(req, res)  {
 //     //we want to send array of all users
