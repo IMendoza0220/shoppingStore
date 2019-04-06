@@ -2,6 +2,8 @@ var express = require("express");
 var path = require("path");
 var app = express();
 require('dotenv').config()
+
+var PORT = process.env.PORT || 2678;
 //setup express app to handle data parsing from post requests in db.js
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -13,4 +15,4 @@ app.use("/", express.static(path.join(__dirname,"public")));
 //to create users, use postman to make a post request at /api/users
 app.use("/api", require("./routes/api").route);
 
-module.exports = app.listen(2678, function(){console.log("Server started at http://localhost:2678")});
+module.exports = app.listen(PORT, function(){console.log("Server started at http://localhost:2678")});
