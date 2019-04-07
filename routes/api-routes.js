@@ -7,7 +7,7 @@ module.exports = function(app) {
 
     app.get("/api/products", function(req, res) {
         //Get all Products; sequelize will fetch all products following a get request
-        db.Product.findAll()
+        Product.findAll()
         .then(function(products) {
             res.status(200).send(products);
         })
