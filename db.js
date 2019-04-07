@@ -20,13 +20,13 @@ if (process.env[dbEnv.use_env_variable]) {
 } else {
     sequelizeConnection = new Sequelize({
         "username": "root",
-        "password": process.env.password,
+        "password": "amorales80",
         "database": "shoppingdb",
         "host": "localhost",
         "port": 3306,
         "dialect": "mysql"
-      }) 
-};
+      }); 
+}
 
 
 
