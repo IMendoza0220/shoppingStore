@@ -17,7 +17,7 @@ Online store with hookah and shisha products. Sellers can add items to inventory
 * Adrian Morales
 
 ## Using Existing Functionality
-#### Adding a product as a Seller
+### Adding a product as a Seller
 1. Click ```HookahZone``` from the far right from any page to return to the Home Page
 2. Click ```Seller Login``` from the navigation bar
 3. Add a Product Name and Department
@@ -28,14 +28,14 @@ Online store with hookah and shisha products. Sellers can add items to inventory
 6. An alert will appear to confirm the product has been added to the database
 7. Return to the Home Page to see your added product
 
-#### Shopping as a Buyer
+### Shopping as a Buyer
 1. Click ```Add to Cart``` to add an item to the shopping cart. Adding to cart saves items in Local Storage. Note: User may have to click more than once for the item to be added.
 2. Click the Shopping Cart button on the top right to reveal the items in cart. Note: Increasing Quantity and Remove functionality will be added soon!
 3. Click check out to proceed with payment page. No actual payment information is collected!
 4. Complete Form and click ```Continue```. This will add information to the MySQL Database.
 5. Name information is stored in local storage and rendered on the payment confirmation screen.
 
-#### Clearing the Shopping Cart
+### Clearing the Shopping Cart
 1. Navigate to Local Storage on your browser
 2. Clear Local Storage
 
