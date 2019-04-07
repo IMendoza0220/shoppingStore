@@ -11,17 +11,17 @@ $(document).ready(function () {
             <td><img id ="picInCart" src=${cartItems[i].picture}></td>
             <td>
                 <a href="#" id="cartItemName">${cartItems[i].name}</a>
-                <p>${cartItems[i].department}</p>
+                <p style="color: darkgoldenrod;font-family: kalam, cursive;font-size: 18pt;margin-bottom: 0.25rem;">${cartItems[i].department}</p>
                 <button class="btn btn-danger btn-sm">Remove</button>
             </td>
             <td>
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">-</button>
+                        <button class="btn btn-secondary" type="button" id="inputGroupFileAddon03">-</button>
                     </div>
                         <input class="text-center" type="text" maxlength="3" size="1" placeholder="1">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">+</button>
+                        <button class="btn btn-secondary" type="button">+</button>
                     </div>
                 </div>
             </td>
@@ -51,7 +51,7 @@ $(document).ready(function () {
         `);
     } else {
         $("#total-price").html(`
-        <h3 id="totalPriceInCart"> <b style="color:darkgoldenrod">Total:</b> ${Dinero({ amount: price, currency: 'USD' }).toFormat('$0.00')}</h3>
+        <h3 id="totalPriceInCart"> <b style="color:darkgoldenrod">Total:</b> <span class="amount">${Dinero({ amount: price, currency: 'USD' }).toFormat('$0.00')}</span></h3>
       `);
     }
 
