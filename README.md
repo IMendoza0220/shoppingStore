@@ -22,9 +22,13 @@ Online store with hookah and shisha products. Sellers can add items to inventory
 2. Click ```Seller Login``` from the navigation bar
 3. Add a Product Name and Department
 4. The price is formatted by dinero js. See example below:
-   ```10000 //returns $100.00 on the Home Page```
+    ```
+    10000 //returns $100.00 on the Home Page
+    ```
 5. An image url must be entered in the ```Picture``` field, such as:
-    ```https://images-na.ssl-images-amazon.com/images/I/81qSic03XeL._SY355_.jpg```
+    ```
+    https://images-na.ssl-images-amazon.com/images/I/81qSic03XeL._SY355_.jpg
+    ```
 6. An alert will appear to confirm the product has been added to the database
 7. Return to the Home Page to see your added product
 
